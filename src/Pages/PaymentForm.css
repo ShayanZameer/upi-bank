@@ -1,6 +1,7 @@
 .payment-container {
     font-family: Arial, sans-serif;
     width: 100%;
+    /* height: auto; */
     max-width: 97.5%;
     margin: auto;
     padding: 20px;
@@ -77,9 +78,11 @@
   
   
   .expired-notice {
-    color: red;
-    text-align: center;
+    color: #075afd ;
+    text-align: left;
     margin-top: 20px;
+    text-decoration: underline;
+    font-size: 14px;
   }
 
 
@@ -150,10 +153,31 @@
     margin-right: 10px;
   }
   
-  .arrow-icon {
-    margin-left: 10px;
-    font-size: 20px; /* Adjust size as necessary */
+
+  .payment-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid blue;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000; /* Adjust text color as needed */
+    background-color: #fff; /* Background color */
+    width: 545px; /* Adjust width as needed */
+    border-radius: 4px;
   }
+  
+  .payment-icon {
+    width: 50px; /* Adjust icon size as needed */
+    height: auto;
+  }
+  
+  .arrow-icon {
+    font-size: 24px; /* Adjust icon size as needed */
+    color: grey; /* Adjust icon color as needed */
+  }
+  
+ 
   
   
   @media (max-width: 768px) {

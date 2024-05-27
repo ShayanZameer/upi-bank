@@ -1,6 +1,11 @@
 import React, { useState,useEffect } from 'react';
 import './PaymentForm.css'; 
 import exampleImage from '../assets/Gpay.png';  // Relative path to the image
+import exampleImage1 from '../assets/pp.png';  // Relative path to the image
+import exampleImage2 from '../assets/paytm.jpg';  // Relative path to the image
+
+
+
 import { IoIosArrowForward } from "react-icons/io";
 
 
@@ -76,30 +81,84 @@ function PaymentForm() {
           </div>
           <p>2. Transfer the amount you want to recharge to us by UPI ID transfer, NOT MOBILE NUMBER.</p>
           <div style={{backgroundColor:'white', }} className="button-group">
-:
-          <button style={{backgroundColor:'white' ,}}  className="custom-button">
-      <div className="button-content">
-        <img src={exampleImage} alt="Icon" className="button-icon" />
-        {/* <span>Your Text Here</span> */}
-        <IoIosArrowForward color='grey' />    
+
+
+
+
+
+
+<div style={{display:"flex"}}>
+
+
+
+<div class="payment-button">
+  <img src={exampleImage2} alt="Payment Icon" class="payment-icon"/>
+  {/* <span>paytm</span> */}
+  <IoIosArrowForward color='grey' className="arrow-icon"/>    
+</div>
+
+<div class="payment-button">
+  <img src={exampleImage1} alt="Payment Icon" class="payment-icon"/>
+  {/* <span>paytm</span> */}
+  <IoIosArrowForward color='grey' className="arrow-icon"/>    
+</div> 
+
+
+</div>
+
+
+
+
+
           </div>
-    </button>
-      
-          </div>
+
+          <div style={{display:"flex"}}>
+
+
+
+<div class="payment-button">
+  <img src={exampleImage} alt="Payment Icon" class="payment-icon"/>
+  {/* <span>paytm</span> */}
+  <IoIosArrowForward color='grey' className="arrow-icon"/>    
+</div>
+
+<div class="payment-button">
+  <img src={exampleImage} alt="Payment Icon" class="payment-icon"/>
+  {/* <span>paytm</span> */}
+  <IoIosArrowForward color='grey' className="arrow-icon"/>    
+</div> 
+
+
+</div>
+          
+
+
+        
+
+
           <p>3. Please enter Ref No. to complete the recharge.</p>
-          <div className="input-group">
-            <input
-              type="text"
-              placeholder="Ref No."
-              value={refNumber}
-              onChange={(e) => setRefNumber(e.target.value)}
-            />
-            <button type="submit">Submit</button>
-          </div>
+          
+
+<div style={{display:"flex", flexDirection:"row"}} className="input-group">
+
+<div style={{display:"flex", flexDirection:"row", }}>
+
+<input  style={{width:"1150px", borderRadius:"4px"}} placeholder="Ref No." type="text" value={refNumber} onChange={(e) => setRefNumber(e.target.value)}  /> <span style={{marginTop:"1px"}}><button  style={{marginLeft:"-85px",fontSize:"16px" , marginTop:"5px" }} type="button">Submit</button></span>
+</div>
+
+</div>
+
+
+          
         </div>
       </form>
       <div className="expired-notice">
-        The order has expired, please regenerate
+        <p>Please enter the REF NO/Reference NO/UTR (12-digit number) of your transfer and we will finish your recharge as soon as possible.</p>
+      </div>
+
+
+      <div >
+        <p style={{textAlign:"center",marginBottom:-10, color:"grey", fontSize:"12px"}}>100% Secure Payments Powered by Pays</p>
       </div>
     </div>
   );
