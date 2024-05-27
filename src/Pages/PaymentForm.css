@@ -209,13 +209,13 @@
     .input-group, 
     .button-group {
       flex-direction: column; /* Stack elements vertically */
-      width: 100%; /* Use full width */
+      width: 50%; /* Use full width */
     }
   
     .input-group input,
     .button-group button,
     .input-group button {
-      width: 100%; /* Make inputs and buttons take full width */
+      width: 50%; /* Make inputs and buttons take full width */
       margin-right: 0; /* Remove margin-right */
       margin-bottom: 10px; /* Add space between stacked elements */
     }
