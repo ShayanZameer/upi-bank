@@ -245,12 +245,12 @@
     margin-bottom: 10px; /* Space between payment buttons */
   }
 
-  .payment-banner,
+  /* .payment-banner,
   .payment-info {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center alignment */
-    text-align: center; /* Center text */
-  }
+    /* flex-direction: column; Stack elements vertically */
+    /* align-items: center; Center alignment */
+    /* text-align: center; Center text */
+  } */
 
   .payment-icon,
   .arrow-icon {
@@ -265,7 +265,7 @@
   .currency-symbol {
     font-size: 22px; /* Slightly reduce the font size */
   }
-}
+
 
 
 
