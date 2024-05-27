@@ -3,6 +3,10 @@ import './PaymentForm.css';
 import exampleImage from '../assets/Gpay.png';  // Relative path to the image
 import exampleImage1 from '../assets/pp.png';  // Relative path to the image
 import exampleImage2 from '../assets/paytm.jpg';  // Relative path to the image
+import exampleImage3 from '../assets/upi-twitter.jpg';  // Relative path to the image
+import { Link } from 'react-router-dom';
+
+
 
 
 
@@ -103,17 +107,15 @@ function PaymentForm() {
 
 <div style={{display:"flex"}}>
 
-<div class="payment-button">
-  <img src={exampleImage2} alt="Payment Icon" class="payment-icon"/>
-  {/* <span>paytm</span> */}
-  <IoIosArrowForward color='grey' className="arrow-icon"/>    
-</div>
+<Link to="https://paytm.com/" className="payment-button">
+          <img src={exampleImage2} alt="Payment Icon" className="payment-icon"/>
+          <IoIosArrowForward color='grey' className="arrow-icon"/>
+        </Link>
 
-<div class="payment-button">
-  <img src={exampleImage1} alt="Payment Icon" class="payment-icon"/>
-  {/* <span>paytm</span> */}
-  <IoIosArrowForward color='grey' className="arrow-icon"/>    
-</div> 
+        <Link to="https://www.phonepe.com/" className="payment-button">
+          <img src={exampleImage1} alt="Payment Icon" className="payment-icon"/>
+          <IoIosArrowForward color='grey' className="arrow-icon"/>
+        </Link>
 
 
 </div>
@@ -128,25 +130,17 @@ function PaymentForm() {
 
 
 
-<div class="payment-button">
-  <img src={exampleImage} alt="Payment Icon" class="payment-icon"/>
-  {/* <span>paytm</span> */}
-  <IoIosArrowForward color='grey' className="arrow-icon"/>    
+          <Link to="https://payments.google.com/gp/w/home/paymentmethods?sctid=7651518633078137" className="payment-button">
+          <img src={exampleImage} alt="Payment Icon" className="payment-icon"/>
+          <IoIosArrowForward color='grey' className="arrow-icon"/>
+        </Link>
+
+
+        <Link to="https://www.npci.org.in/what-we-do/upi/product-overview" className="payment-button">
+          <img src={exampleImage3} alt="Payment Icon" className="payment-icon"/>
+          <IoIosArrowForward color='grey' className="arrow-icon"/>
+        </Link> 
 </div>
-
-<div class="payment-button">
-  <img src={exampleImage} alt="Payment Icon" class="payment-icon"/>
-  {/* <span>paytm</span> */}
-  <IoIosArrowForward color='grey' className="arrow-icon"/>    
-</div> 
-
-
-</div>
-          
-
-
-        
-
 
           <p>3. Please enter Ref No. to complete the recharge.</p>
           
