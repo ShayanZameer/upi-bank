@@ -198,6 +198,7 @@
 
 
   @media (max-width: 768px) {
+
   .payment-container {
     padding: 10px; /* Reduce padding */
     max-width: 95%;
@@ -207,23 +208,33 @@
   .header,
   .instructions p,
   
+  
   .payment-info,
   .paragraph {
     font-size: 14px; /* Adjust font size for better readability */
   }
+  
 
   .input-group, 
   .button-group {
     flex-direction: column; /* Stack elements vertically */
-    width: 100%; /* Use full width */
+    width: 70%; /* Use full width */
+  }
+  
+
+ 
+  .button-group button, */
+  .input-group button {
+    /* width: 400px; Make inputs and buttons take full width */
+    margin-left: -400; /* Remove margin-right */
+    /* margin-bottom: 10px; Add space between stacked elements */
   }
 
-  .input-group input,
-  .button-group button,
-  .input-group button {
-    width: 120%; /* Make inputs and buttons take full width */
-    margin-right: 0; /* Remove margin-right */
-    margin-bottom: 10px; /* Add space between stacked elements */
+  .input-group input{
+    width: 400px; /* Make inputs and buttons take full width */
+    margin-left: -400; /* Remove margin-right */
+    /* margin-bottom: 10px; Add space between stacked elements */
+
   }
 
   .payment-button {
