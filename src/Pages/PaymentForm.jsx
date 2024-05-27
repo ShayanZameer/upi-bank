@@ -93,7 +93,7 @@ function PaymentForm() {
 
             <div style={{display:"flex", flexDirection:"row", }}>
 
-            <input  style={{width:"1150px", borderRadius:"4px"}}  type="text" value="Rupeyfree@indianbank" readOnly /> <span style={{marginTop:"1px"}}><button  onClick={handleCopyClick} style={{marginLeft:"-80px",fontSize:"16px" , marginTop:"5px" }} type="button">COPY</button></span>
+            <input className='inp'    type="text" value="Rupeyfree@indianbank" readOnly /> <span style={{marginTop:"1px"}}><button  onClick={handleCopyClick} style={{marginLeft:"-80px",fontSize:"16px" , marginTop:"5px" }} type="button">COPY</button></span>
             </div>
             
           </div>

@@ -40,6 +40,11 @@
     border: 1px solid blue; /* Set border color to blue */
   }
 
+  .inp{
+  width:1150px;
+  border-Radius:4px;
+  }
+
   .button-group {
 
     display: flex;
