@@ -20,6 +20,20 @@ function PaymentForm() {
   };
 
 
+  const handleCopyClick = () => {
+    const upiValue = "Rupeyfree@indianbank"; // since this is the value set for the input field and it's static
+    navigator.clipboard.writeText(upiValue)
+      .then(() => {
+        alert("UPI Information copied to clipboard!");
+      })
+      .catch(err => {
+        console.error("Failed to copy:", err);
+        alert("Failed to copy UPI information.");
+      });
+  };
+  
+
+
 
   useEffect(() => { 
     const fetchPaymentAmount = async () => {
@@ -75,11 +89,11 @@ function PaymentForm() {
 
             <div style={{display:"flex", flexDirection:"row", }}>
 
-            <input  style={{width:"1150px", borderRadius:"4px"}}  type="text" value="example@upi" readOnly /> <span style={{marginTop:"1px"}}><button  style={{marginLeft:"-80px",fontSize:"16px" , marginTop:"5px" }} type="button">COPY</button></span>
+            <input  style={{width:"1150px", borderRadius:"4px"}}  type="text" value="Rupeyfree@indianbank" readOnly /> <span style={{marginTop:"1px"}}><button  onClick={handleCopyClick} style={{marginLeft:"-80px",fontSize:"16px" , marginTop:"5px" }} type="button">COPY</button></span>
             </div>
             
           </div>
-          <p>2. Transfer the amount you want to recharge to us by UPI ID transfer, NOT MOBILE NUMBER.</p>
+          <p>2. Transfer the amount you want to recharge to us <span style={{color:"red"}}>by UPI ID transfer, NOT MOBILE NUMBER.</span> </p>
           <div style={{backgroundColor:'white', }} className="button-group">
 
 
@@ -88,8 +102,6 @@ function PaymentForm() {
 
 
 <div style={{display:"flex"}}>
-
-
 
 <div class="payment-button">
   <img src={exampleImage2} alt="Payment Icon" class="payment-icon"/>
