@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';  // Import useNavigate
 
+import { Navigate } from 'react-router-dom';
+
 
 const Adddata = () => {
   const [data, setData] = useState(''); // State to hold the input value
   const navigate = useNavigate();  // Initialize useNavigate
+  const [submitted, setSubmitted] = useState(false);
+  
+
 
 
   const handleSubmit = async (event) => {
@@ -21,6 +26,8 @@ const Adddata = () => {
         const jsonResponse = await response.json();
         alert('Data added successfully: ' + JSON.stringify(jsonResponse));
         setData(''); // Clear the input after successful submission
+        setSubmitted(true);
+
         navigate('/payment-main'); 
       } else {
         throw new Error('Failed to submit data');
@@ -29,6 +36,7 @@ const Adddata = () => {
       alert('Error: ' + error.message);
     }
   };
+  
 
   return (
     <div>

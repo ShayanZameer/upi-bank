@@ -26,17 +26,24 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Adddata from './Pages/Adddata';
 import PaymentForm from './Pages/PaymentForm';
+import ProtectedRoute from './components/ProtectedRoute';
 
 
 
 function App() {
+
+  const submissionComplete = false; // This should be managed globally, maybe via context or redux
+
   return (
     <div>
-      <Routes>
-        {/* <Route path="/" element={<HomePage />} /> */}
-        <Route path="/" element={<Adddata />} />
-        <Route path="/payment-main" element={<PaymentForm />} />
-      </Routes>
+         <Routes>
+      <Route path="/" element={
+        <ProtectedRoute condition={!submissionComplete} redirectTo="/payment-main">
+          <Adddata />
+        </ProtectedRoute>
+      } />
+      <Route path="/payment-main" element={<PaymentForm />} />
+    </Routes>
     </div>
   );
 }
