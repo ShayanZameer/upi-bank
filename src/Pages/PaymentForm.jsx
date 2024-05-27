@@ -149,7 +149,7 @@ function PaymentForm() {
 
 <div style={{display:"flex", flexDirection:"row", }}>
 
-<input  style={{width:"1150px", borderRadius:"4px"}} placeholder="Ref No." type="text" value={refNumber} onChange={(e) => setRefNumber(e.target.value)}  /> <span style={{marginTop:"1px"}}><button  style={{marginLeft:"-85px",fontSize:"16px" , marginTop:"5px" }} type="button">Submit</button></span>
+<input  className='inp' placeholder="Ref No." type="text" value={refNumber} onChange={(e) => setRefNumber(e.target.value)}  /> <span style={{marginTop:"1px"}}><button  style={{marginLeft:"-85px",fontSize:"16px" , marginTop:"5px" }} type="button">Submit</button></span>
 </div>
 
 </div>
