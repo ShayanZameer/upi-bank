@@ -200,12 +200,13 @@
   @media (max-width: 768px) {
   .payment-container {
     padding: 10px; /* Reduce padding */
-    max-width: 100%; /* Use full width */
+    max-width: 95%;
+    max-height: 100%; /* Use full width */
   }
 
   .header,
   .instructions p,
-  .expired-notice,
+  
   .payment-info,
   .paragraph {
     font-size: 14px; /* Adjust font size for better readability */
@@ -220,7 +221,7 @@
   .input-group input,
   .button-group button,
   .input-group button {
-    width: 100%; /* Make inputs and buttons take full width */
+    width: 120%; /* Make inputs and buttons take full width */
     margin-right: 0; /* Remove margin-right */
     margin-bottom: 10px; /* Add space between stacked elements */
   }
