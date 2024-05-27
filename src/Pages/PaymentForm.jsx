@@ -1,17 +1,39 @@
-import React, { useState,useRef } from 'react';
-import './PaymentForm.css'; // Ensure the CSS file is correctly imported
+import React, { useState,useEffect } from 'react';
+import './PaymentForm.css'; 
 import exampleImage from '../assets/Gpay.png';  // Relative path to the image
 import { IoIosArrowForward } from "react-icons/io";
 
 
 function PaymentForm() {
   const [refNumber, setRefNumber] = useState('');
-//   const upiRef = useRef(null); // Reference to the UPI input
+  const [paymentAmount, setPaymentAmount] = useState('');
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
     alert('Submitted with reference number: ' + refNumber);
   };
+
+
+
+  useEffect(() => { 
+    const fetchPaymentAmount = async () => {
+      try {
+        const response = await fetch('https://e-commerce-api-h8lm.onrender.com/api/Payment/retrieveLatest');
+        const data = await response.json();
+        if (data && data.paymentAmount) {
+          setPaymentAmount(data.paymentAmount);
+        } else {
+          setPaymentAmount('No payment amount available');
+        }
+      } catch (error) {
+        console.error('Failed to fetch payment amount:', error);
+        setPaymentAmount('Failed to load payment amount');
+      }
+    };
+
+    fetchPaymentAmount();
+  }, []); 
 
 
   return (
@@ -31,7 +53,7 @@ function PaymentForm() {
       <p className='paragraph'>Payment Amount</p>
       <div className="payment-info">
         <span className="currency-symbol">₹</span>
-        <span className="amount">500</span>
+        <span className="amount">{paymentAmount}</span>
       </div>
     </div>
 
