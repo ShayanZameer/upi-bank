@@ -201,7 +201,7 @@
 
   .payment-container {
     padding: 10px; /* Reduce padding */
-    max-width: 95%;
+    max-width: 100%;
     max-height: 100%; /* Use full width */
   }
 
@@ -218,7 +218,7 @@
   .input-group, 
   .button-group {
     flex-direction: column; /* Stack elements vertically */
-    width: 70%; /* Use full width */
+    width: 100%; /* Use full width */
   }
   
 
@@ -231,7 +231,7 @@
   }
 
   .input-group input{
-    width: 400px; /* Make inputs and buttons take full width */
+    width: 340px; /* Make inputs and buttons take full width */
     margin-left: -400; /* Remove margin-right */
     /* margin-bottom: 10px; Add space between stacked elements */
 
