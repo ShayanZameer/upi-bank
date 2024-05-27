@@ -1,0 +1,171 @@
+.payment-container {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 97.5%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .header {
+    
+    /* padding: 10px 20px; */
+    font-size: 20px;
+    text-align: left;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .instructions p {
+    margin: 10px 0;
+  }
+  
+  .input-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+    width: 600px;
+
+    height: 50px;
+
+    /* background-color: beige; */
+
+  }
+
+  .input-group input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid blue; /* Set border color to blue */
+  }
+
+  .button-group {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+    width: 600px;
+
+    /* background-color: beige; */
+
+
+  }
+
+  .input-group button {
+    padding: 10px;
+    color:#075afd;
+    cursor: pointer;
+    font-weight: 600;
+    /* font-size: large; */
+    background-color: white;
+    height: "20px";
+    border: none;
+    margin-top: "1px";
+  }
+  
+  
+  
+  .input-group input, .button-group button {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  .input-group input {
+    padding: 10px;
+  }
+  
+  
+  .expired-notice {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+
+  .payment-banner {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    background-image: url('../assets/bg.png'); /* Replace 'path_to_your_image.jpg' with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    width: 100%; /* Adjust width as necessary */
+    height: 100px; /* Adjust height as necessary */
+    color: white; /* Adjust text color as necessary */
+    text-align: center;
+
+    border-radius: 10px;
+  }
+  
+  .payment-info {
+    font-size: 24px; /* Adjust font size as necessary */
+    display: flex;
+    padding-left: 10px;
+
+    /* align-items: start; */
+    /* justify-content: start; */
+  }
+  
+  .currency-symbol {
+    font-size: 26px; /* Adjust the size of the Rupee symbol as necessary */
+    margin-right: 5px;
+  }
+  
+  .amount {
+    font-weight: bold; /* Makes the amount bold */
+  }
+
+  .paragraph{
+    text-align: start;
+    padding-left: 10px;
+
+    font-size: 12px;
+
+  }
+
+
+  .custom-button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 300px;
+
+    justify-content: center;
+    border-radius: 5px;
+  }
+  
+  .button-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button-icon {
+    height: 24px; /* Adjust the size as necessary */
+    width: 24px; /* Adjust the size as necessary */
+    margin-right: 10px;
+  }
+  
+  .arrow-icon {
+    margin-left: 10px;
+    font-size: 20px; /* Adjust size as necessary */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .input-group, .button-group {
+      flex-direction: column;
+
+    }
+  
+    .input-group input, .button-group button {
+      margin: 5px 0;
+    }
+  }
+
+
+  
