@@ -25,7 +25,7 @@ function PaymentForm() {
 
 
   const handleCopyClick = () => {
-    const upiValue = "Rupeyfree@indianbank"; // since this is the value set for the input field and it's static
+    const upiValue = "Crazypay@kotak"; // since this is the value set for the input field and it's static
     navigator.clipboard.writeText(upiValue)
       .then(() => {
         alert("UPI Information copied to clipboard!");
