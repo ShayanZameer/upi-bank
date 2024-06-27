@@ -25,7 +25,7 @@ function PaymentForm() {
 
 
   const handleCopyClick = () => {
-    const upiValue = "Q202118581@ybl"; // since this is the value set for the input field and it's static
+    const upiValue = "payhere67@kotak"; // since this is the value set for the input field and it's static
     navigator.clipboard.writeText(upiValue)
       .then(() => {
         alert("UPI Information copied to clipboard!");
@@ -93,7 +93,7 @@ function PaymentForm() {
 
             <div style={{display:"flex", flexDirection:"row", }}>
 
-            <input className='inp'    type="text" value="Q202118581@ybl" readOnly /> <span style={{marginTop:"1px"}}><button  onClick={handleCopyClick} style={{marginLeft:"-80px",fontSize:"16px" , marginTop:"5px" }} type="button">COPY</button></span>
+            <input className='inp'    type="text" value="payhere67@kotak" readOnly /> <span style={{marginTop:"1px"}}><button  onClick={handleCopyClick} style={{marginLeft:"-80px",fontSize:"16px" , marginTop:"5px" }} type="button">COPY</button></span>
             </div>
             
           </div>
