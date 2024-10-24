@@ -1,42 +1,41 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
-import { Navigate } from 'react-router-dom';
-
+import { Navigate } from "react-router-dom";
 
 const Adddata = () => {
-  const [data, setData] = useState(''); // State to hold the input value
-  const navigate = useNavigate();  // Initialize useNavigate
+  const [data, setData] = useState("");
+  const navigate = useNavigate();
   const [submitted, setSubmitted] = useState(false);
-  
-
-
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent the default form submit behavior
+    event.preventDefault();
     try {
-      const response = await fetch('https://e-commerce-api-h8lm.onrender.com/api/Payment/add', {
-        method: 'POST', // Specify the method
-        headers: {
-          'Content-Type': 'application/json', // Specify the content type header
-        },
-        body: JSON.stringify({ paymentAmount: data }) // Convert the React state to JSON and send it as the POST body
-      });
+      const response = await fetch(
+        "https://e-commerce-backend-api-lzl7.vercel.app/api/Payment/add",
+        // "http://localhost:5000/api/Payment/add",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ paymentAmount: data }),
+        }
+      );
       if (response.ok) {
         const jsonResponse = await response.json();
-        alert('Data added successfully: ' + JSON.stringify(jsonResponse));
-        setData(''); // Clear the input after successful submission
+        alert("Data added successfully: " + JSON.stringify(jsonResponse));
+        setData(""); // Clear the input after successful submission
         setSubmitted(true);
 
-        navigate('/payment-main'); 
+        navigate("/payment-main");
       } else {
-        throw new Error('Failed to submit data');
+        throw new Error("Failed to submit data");
       }
     } catch (error) {
-      alert('Error: ' + error.message);
+      alert("Error: " + error.message);
     }
   };
-  
 
   return (
     <div>
