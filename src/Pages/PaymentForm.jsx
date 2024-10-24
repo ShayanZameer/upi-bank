@@ -35,7 +35,7 @@ function PaymentForm() {
       try {
         const response = await fetch(
           // "http://localhost:5000/api/Payment/retrieveLatest"
-          "https://e-commerce-api-h8lm.onrender.com/api/Payment/retrieveLatest"
+          "https://e-commerce-backend-api-lzl7.vercel.app/api/Payment/retrieveLatest"
         );
         const data = await response.json();
         if (data && data.paymentAmount) {
