@@ -26,7 +26,7 @@ const Adddata = () => {
         const jsonResponse = await response.json();
         // alert("Data added successfully: " + JSON.stringify(jsonResponse));\
         toast.success(
-          "Data added successfully: " + JSON.stringify(jsonResponse)
+          "Data added successfully: " + JSON.stringify(jsonResponse.data)
         );
 
         setData("");
