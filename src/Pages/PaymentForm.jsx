@@ -18,7 +18,7 @@ function PaymentForm() {
   };
 
   const handleCopyClick = () => {
-    const upiValue = "payhere67@kotak"; // since this is the value set for the input field and it's static
+    const upiValue = "Payment34@kotak"; // since this is the value set for the input field and it's static
     navigator.clipboard
       .writeText(upiValue)
       .then(() => {
@@ -35,7 +35,7 @@ function PaymentForm() {
       try {
         const response = await fetch(
           // "http://localhost:5000/api/Payment/retrieveLatest"
-          "https://e-commerce-backend-api-lzl7.vercel.app/api/Payment/retrieveLatest"
+          "https://e-commerce-backend-api-1.onrender.com/api/Payment/retrieveLatest"
         );
         const data = await response.json();
         if (data && data.paymentAmount) {
@@ -92,7 +92,7 @@ function PaymentForm() {
               <input
                 className="inp"
                 type="text"
-                value="payhere67@kotak"
+                value="Payment34@kotak"
                 readOnly
               />{" "}
               <span style={{ marginTop: "1px" }}>
