@@ -24,10 +24,7 @@ const Adddata = () => {
       );
       if (response.ok) {
         const jsonResponse = await response.json();
-        // alert("Data added successfully: " + JSON.stringify(jsonResponse));\
-        toast.success(
-          "Data added successfully: " + JSON.stringify(jsonResponse.data)
-        );
+        toast.success("Payment added successfully: ");
 
         setData("");
         setSubmitted(true);
