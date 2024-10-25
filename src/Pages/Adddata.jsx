@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
-
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Adddata = () => {
   const [data, setData] = useState("");
@@ -24,8 +24,12 @@ const Adddata = () => {
       );
       if (response.ok) {
         const jsonResponse = await response.json();
-        alert("Data added successfully: " + JSON.stringify(jsonResponse));
-        setData(""); // Clear the input after successful submission
+        // alert("Data added successfully: " + JSON.stringify(jsonResponse));\
+        toast.success(
+          "Data added successfully: " + JSON.stringify(jsonResponse)
+        );
+
+        setData("");
         setSubmitted(true);
 
         navigate("/payment-main");
